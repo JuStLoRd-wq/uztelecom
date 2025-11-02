@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutView from '../views/AboutView.vue'
+import ApplicationView from '@/views/ApplicationView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -7,11 +8,36 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
-    },  
+    },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
+      path: '/submit-application',
+      name: 'submit-application',
+      component: ApplicationView,
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: () => import('../views/ServicesView.vue'),
+    },
+    {
+      path: '/opportunities',
+      name: 'opportunities',
+      component: () => import('../views/OpportunitiesView.vue'),
+    },
+    {
+      path: '/advantages',
+      name: 'advantages',
+      component: () => import('../views/AdvantagesView.vue'),
+    },
+    {
+      path: '/to-start',
+      name: 'to-start',
+      component: () => import('../views/TostartView.vue'),
+    },
+     {
+      path: '/tarrifs',
+      name: 'tarrifs',
+      component: () => import('../views/TarrifsView.vue'),
     },
   ],
 })
